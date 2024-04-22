@@ -154,11 +154,17 @@ public class CreditController {
         try {
             SCredit service = new SCredit(); // Assurez-vous que le service adapté à 'Credit' est utilisé
             service.ajouter(newCredit); // Assurez-vous que la méthode `ajouter` existe et fonctionne correctement
+
+            // Rafraîchir la liste observable avec les nouvelles données
+            ObservableList<Credit> credits = FXCollections.observableArrayList(sa.afficher());
+            listTerrain.setItems(credits);
+
             showAlert("Succès", "Le crédit a été ajouté avec succès.");
         } catch (Exception e) {
             showAlert("Erreur lors de l'ajout", e.getMessage());
         }
         listTerrain.getItems().set(listTerrain.getSelectionModel().getSelectedIndex(), newCredit);
+
 
         // Réinitialiser les champs du formulaire
         nbm.clear();
