@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.controlsfx.control.Rating?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1366.0" style="-fx-background-color: #4c4177;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankmangment.carteController">
+    <children>
+        <Label fx:id="welcome" alignment="TOP_CENTER" layoutX="38.0" layoutY="30.0" prefHeight="35.0" prefWidth="242.0" text="Administration Mode" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="24.0" />
+            </font>
+        </Label>
+        <Pane layoutX="1010.0" layoutY="389.0" prefHeight="275.0" prefWidth="330.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+            <children>
+                <Button fx:id="aj" layoutX="77.0" layoutY="34.0" mnemonicParsing="false" onAction="#ajt" prefHeight="55.0" prefWidth="148.0" text="ADD CART" />
+                <Button fx:id="supptr" layoutX="165.0" layoutY="147.0" mnemonicParsing="false" onAction="#supptr" prefHeight="55.0" prefWidth="148.0" text="DELETE CART" />
+            <TextField fx:id="nomm" layoutX="17.0" layoutY="147.0" prefHeight="55.0" prefWidth="134.0" />
+            </children>
+        </Pane>
+        <Pane layoutX="1010.0" layoutY="87.0" prefHeight="290.0" prefWidth="330.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+            <children>
+                <ImageView fx:id="adminimage" fitHeight="186.0" fitWidth="248.0" layoutX="41.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="25.0" layoutY="225.0" text="Admin Name : " textFill="#4c4177">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="25.0" layoutY="253.0" text="Admin ID : " textFill="#4c4177">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="adminname" layoutX="145.0" layoutY="225.0" text="Admin Name" textFill="#4c4177">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+                <Label fx:id="adminid" layoutX="115.0" layoutY="253.0" text="Admin ID" textFill="#4c4177">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Label layoutX="1103.0" layoutY="42.0" text="Admin Information" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="16.0" />
+            </font>
+        </Label>
+        <VBox fx:id="cardsContainer" layoutX="14.0" layoutY="141.0" prefHeight="418.0" prefWidth="719.0" />
+      <TextField fx:id="cusid" layoutX="745.0" layoutY="171.0" prefHeight="45.0" prefWidth="248.0" promptText="num_carte" style="-fx-background-radius: 22; -fx-border-color: #39b5ff; -fx-border-radius: 20; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cusname1" layoutX="745.0" layoutY="332.0" prefHeight="45.0" prefWidth="248.0" promptText="is_frozen" style="-fx-background-radius: 22; -fx-border-color: #39b5ff; -fx-border-radius: 20; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="cusname2" layoutX="745.0" layoutY="261.0" prefHeight="45.0" prefWidth="248.0" promptText="cvv" style="-fx-background-radius: 22; -fx-border-color: #39b5ff; -fx-border-radius: 20; -fx-border-width: 2;">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+      <DatePicker fx:id="datePicker" layoutX="769.0" layoutY="411.0" prefWidth="200.0" style="-fx-background-radius: 22; -fx-background-color: #39b5ff; -fx-border-width: 2;" />
+      <TextField fx:id="etb" layoutX="745.0" layoutY="96.0" prefHeight="45.0" prefWidth="248.0" promptText="num_carte" style="-fx-background-radius: 22; -fx-border-color: #39b5ff; -fx-border-radius: 20; -fx-border-width: 2;" text="etablissement_id">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </TextField>
+
+        <Rating fx:id="Rate" layoutX="67.0" layoutY="320.0" prefHeight="34.0" prefWidth="189.0" rating="3.0" />
+
+    </children>
+</AnchorPane>
