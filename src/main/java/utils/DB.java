@@ -5,19 +5,19 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DB {
-    public final String URL = "jdbc:mysql://localhost:3306/grpach";
+    public final String URL = "jdbc:mysql://localhost:3306/accccccc?autoReconnect=true";
     public final String USERNAME = "root";
 
 
     public static DB instance;
 
-    private Connection connection;
+    private Connection con;
 
 
     private DB() {
 
         try {
-            connection = DriverManager.getConnection(URL,USERNAME,null);
+            con = DriverManager.getConnection(URL,USERNAME,null);
             System.out.println("Connected");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -34,6 +34,6 @@ public class DB {
     }
 
     public Connection getConnection() {
-        return connection;
+        return con;
     }
 }
